@@ -36,6 +36,15 @@ const projects: Project[] = [
     github: 'https://github.com',
     demo: 'https://binge-flix-two.vercel.app/',
   },
+  {
+    title: 'Meet The Therapist',
+    description: 'Website for a therapist, where users can book appointments, and get in touch with the therapist. Created for Manmeet Kaur',
+    image: '/images/therapist.jpg',
+    tech: ['Astro'],
+    github: 'https://github.com/Mananjot17/meet_the_therapist',
+    demo: 'https://www.meetthetherapist.com/',
+  },
+
 ];
 
 const Projects: React.FC = () => {
