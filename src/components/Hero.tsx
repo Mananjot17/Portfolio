@@ -137,7 +137,7 @@ const Hero: React.FC = () => {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-teal-300 text-teal-300 px-8 py-3 rounded-lg hover:bg-teal-600 hover:text-white"
+                className="border-2 border-teal-300 text-teal-300 px-8 py-3 rounded-lg  hover:text-white"
                 href="#contact"
               >
                 Contact Me

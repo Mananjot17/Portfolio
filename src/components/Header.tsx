@@ -140,9 +140,9 @@ const Header = () => {
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
-            className="md:hidden py-4"
+            className="md:hidden py-4 o"
           >
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-4 ">
               <NavLinks />
               <div className="flex justify-center space-x-4 pt-4">
                 <SocialLinks />
@@ -157,7 +157,7 @@ const Header = () => {
 
 const NavLinks = () => (
   <>
-    {['Projects', 'Skills', 'Contact'].map((item) => (
+    {['Profile','Projects', 'Skills', 'Contact'].map((item) => (
       <motion.a
         key={item}
         href={`#${item.toLowerCase()}`}

@@ -549,7 +549,7 @@ const Contact: React.FC = () => {
 };
 
 const ContactInfo: React.FC<ContactInfoProps> = ({ icon, title, content }) => (
-  <div className="flex items-start space-x-4">
+  <div className="flex items-center space-x-4">
     <div className="text-teal-600 flex-shrink-0">{icon}</div>
     <div>
       <h4 className="text-lg font-medium text-gray-800">{title}</h4>

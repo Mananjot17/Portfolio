@@ -8,7 +8,7 @@ const ProfileImage = () => (
     transition={{ duration: 0.5 }}
     className="relative w-48 h-48 md:w-64 md:h-64"
   >
-    <div className="absolute inset-0 bg-blue-500 rounded-full blur-2xl opacity-20 animate-pulse"></div>
+    <div className="absolute inset-0 bg-teal-100 rounded-full blur-2xl opacity-20 animate-pulse"></div>
     <img
       src="images/profile.jpg"
       alt="Profile"
