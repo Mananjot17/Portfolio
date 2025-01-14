@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
                 />
                 <TechCard
                   icon={<Server size={32} />}
-                  title="Frameworks/Libraries"
+                  title="Frameworks /Libraries"
                   description="React.js, Next.js, Node.js, Express.js, Redux"
                 />
                 <TechCard
