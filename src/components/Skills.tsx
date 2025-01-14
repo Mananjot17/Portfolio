@@ -250,7 +250,7 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-b from-teal-50 via-white to-gray-50">
+    <section id="skills" className="py-20 bg-gradient-to-b from-blue-100 via-white to-gray-50">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -306,7 +306,7 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({
   return (
     <motion.div
       variants={itemVariants}
-      className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-2 transition-all"
+      className="bg-gradient-to-r from-blue-200 to-teal-100 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-2 transition-all"
     >
       <div className="p-6">
         <h3 className="text-xl font-semibold text-teal-700 mb-4">{category}</h3>

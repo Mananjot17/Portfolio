@@ -107,21 +107,26 @@ import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
 const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
+  // Function to close the mobile menu when a link is clicked
+  const closeMenu = () => setIsOpen(false);
+
   return (
     <header className="fixed w-full top-0 z-50 bg-gradient-to-r from-blue-700 to-teal-500 text-white shadow-md">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <motion.div
+          <motion.a
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="text-2xl font-bold"
+            href='#profile'
+            
           >
             My Portfolio
-          </motion.div>
+          </motion.a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <NavLinks />
+            <NavLinks closeMenu={closeMenu} />
             <SocialLinks />
           </div>
 
@@ -140,10 +145,10 @@ const Header = () => {
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
-            className="md:hidden py-4 o"
+            className="md:hidden py-4"
           >
-            <div className="flex flex-col space-y-4 ">
-              <NavLinks />
+            <div className="flex flex-col space-y-4">
+              <NavLinks closeMenu={closeMenu} />
               <div className="flex justify-center space-x-4 pt-4">
                 <SocialLinks />
               </div>
@@ -155,14 +160,16 @@ const Header = () => {
   );
 };
 
-const NavLinks = () => (
+// Modify NavLinks to accept the closeMenu prop
+const NavLinks = ({ closeMenu }: { closeMenu: () => void }) => (
   <>
-    {['Profile','Projects', 'Skills', 'Contact'].map((item) => (
+    {['Profile', 'Projects', 'Skills', 'Contact'].map((item) => (
       <motion.a
         key={item}
         href={`#${item.toLowerCase()}`}
-        whileHover={{ scale: 1.1 }}
+        
         className="text-white hover:text-teal-200"
+        onClick={closeMenu}  // Close the menu when a link is clicked
       >
         {item}
       </motion.a>

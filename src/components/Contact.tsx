@@ -440,7 +440,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-teal-50 via-white to-gray-50">
+    <section id="contact" className="py-20 bg-gradient-to-r from-blue-500 to-teal-500 text-white">
       <div className="container mx-auto px-6">
         <ToastContainer />
         <motion.div
@@ -448,8 +448,8 @@ const Contact: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4 text-teal-700">Get In Touch</h2>
-          <p className="text-gray-600">I'd love to hear from you! Let's discuss your next project.</p>
+          <h2 className="text-4xl font-bold mb-4 text-white">Get In Touch</h2>
+          <p className="text-teal-100">I'd love to hear from you! Let's discuss your next project.</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-16">
@@ -461,7 +461,7 @@ const Contact: React.FC = () => {
           >
             <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-teal-700 mb-2">
                   Name
                 </label>
                 <input
@@ -475,7 +475,7 @@ const Contact: React.FC = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-teal-700 mb-2">
                   Email
                 </label>
                 <input
@@ -489,7 +489,7 @@ const Contact: React.FC = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-teal-700 mb-2">
                   Message
                 </label>
                 <textarea
@@ -521,17 +521,17 @@ const Contact: React.FC = () => {
             className="space-y-8"
           >
             <ContactInfo
-              icon={<Mail className="w-6 h-6 text-teal-600" />}
+              icon={<Mail className="w-6 h-6 text-teal-100" />}
               title="Email"
               content="mananjotsingh17@gmail.com"
             />
             <ContactInfo
-              icon={<Phone className="w-6 h-6 text-teal-600" />}
+              icon={<Phone className="w-6 h-6  text-teal-100" />}
               title="Phone"
               content="+91 6376169037"
             />
             <ContactInfo
-              icon={<MapPin className="w-6 h-6 text-teal-600" />}
+              icon={<MapPin className="w-6 h-6  text-teal-100" />}
               title="Location"
               content="Kota, Rajasthan, India"
             />
@@ -552,8 +552,8 @@ const ContactInfo: React.FC<ContactInfoProps> = ({ icon, title, content }) => (
   <div className="flex items-center space-x-4">
     <div className="text-teal-600 flex-shrink-0">{icon}</div>
     <div>
-      <h4 className="text-lg font-medium text-gray-800">{title}</h4>
-      <p className="text-gray-600">{content}</p>
+      <h4 className="text-lg font-medium text-white">{title}</h4>
+      <p className="text-teal-100">{content}</p>
     </div>
   </div>
 );

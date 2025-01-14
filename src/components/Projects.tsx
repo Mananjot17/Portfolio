@@ -188,7 +188,7 @@ const projects: Project[] = [
 
 const Projects: React.FC = () => {
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-teal-50 via-white to-gray-50">
+    <section id="projects" className="py-20 bg-gradient-to-b from-blue-100 via-white to-gray-50">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -224,7 +224,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.3 }}
-      className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-2 transition-all"
+      className="bg-gradient-to-r from-blue-200 to-teal-100  rounded-lg shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-2 transition-all"
     >
       <div className="relative group">
         <img
